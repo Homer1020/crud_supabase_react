@@ -43,9 +43,16 @@ export default function UsersPage(): JSX.Element {
   }
 
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
+    interface UserSearch extends Partial<User> {
+      fecha_nacimiento?: string
+    }
+
     const search = e.target.value
     const filteredUsers = users.filter(user => {
-      return Object.values(user).some(value => `${value}`.toLowerCase().includes(search.toLowerCase()))
+      const realUser: UserSearch = {...user}
+      delete realUser.img_path
+      delete realUser.fecha_nacimiento
+      return Object.values(realUser).some(value => `${value}`.toLowerCase().includes(search.toLowerCase()))
     })
     setFilterUsers(filteredUsers)
   }
