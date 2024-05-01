@@ -93,6 +93,7 @@ export default function FormUser({ user }: { user?: User }): JSX.Element {
       {user && (
         <Avatar
           img_path={user.img_path}
+          className="h-24 rounded"
         />
       )}
       <div className="flex flex-col md:grid gap-5 md:grid-cols-2">

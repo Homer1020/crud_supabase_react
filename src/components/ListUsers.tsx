@@ -76,7 +76,7 @@ export default function ListUsers({ users, updateUsers }: { users: User[], updat
             <tr key={ user.id }>
               <th>#{user.id}</th>
               <td>
-                <Avatar img_path={user.img_path} height={12} />
+                <Avatar img_path={user.img_path} className="w-12 rounded" />
               </td>
               <td>{user.nombre}</td>
               <td>{user.apellidos}</td>

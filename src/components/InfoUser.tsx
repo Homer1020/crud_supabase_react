@@ -8,6 +8,7 @@ export default function InfoUser({ user }: { user: User }) {
       <div className="modal-box">
         <Avatar
           img_path={user.img_path}
+          className="w-40 rounded"
         />
         <h3 className="font-bold text-lg">{user.nombre} {user.apellidos}</h3>
         <ul>
