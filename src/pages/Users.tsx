@@ -66,8 +66,8 @@ export default function UsersPage(): JSX.Element {
           <li>Usuarios</li>
         </ul>
       </div>
-      <div className="flex mb-6">
-        <Link to="/usuarios/crear" className="btn btn-primary">
+      <div className="md:flex mb-6">
+        <Link to="/usuarios/crear" className="btn btn-primary mb-5 md:mb-0">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
           </svg>
