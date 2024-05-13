@@ -50,7 +50,8 @@ export default function Login() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <div className="flex-1 flex justify-center items-center">
-        {
+        <div className="container">
+          {
           (!auth && !loading) && (
             <Card>
               <form onSubmit={handleLogin}>
@@ -96,6 +97,7 @@ export default function Login() {
             </Card>
           )
         }
+        </div>
       </div>
       <Footer />
     </div>
